@@ -13,7 +13,7 @@
             <div id="addAddress" class="indi_popup">
                 <span class="main_label">Add / Edit Address</span>
                 <form id="addressForm">
-                    <label for="select_label"></label>
+                    <label for="select_label">Label</label>
                     <select id="select_label">
                       <option value="main">Main</option>
                       <option value="work">Work</option>
@@ -25,14 +25,14 @@
                     <label for="addy">Address</label>
                     <textarea id="addy"></textarea>
                     <br/>
-                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                    <button>Done</button> -or- <span class="closePopBtn">Cancel</span>
                 </form>
             </div>
 
             <div id="addPhone" class="indi_popup">
                 <span class="main_label">Add / Edit Phone</span>
                 <form id="phoneForm">
-                    <label for="select_label"></label>
+                    <label for="select_label">Label</label>
                     <select id="select_label">
                       <option value="main">Main</option>
                       <option value="work">Work</option>
@@ -41,17 +41,17 @@
                       <option value="personal">Personal</option>
                     </select>
                     <br/>
-                    <label for="phone">Address</label>
-                    <textarea id="phone"></textarea>
+                    <label for="phone">Phone</label>
+                    <input id="phone">
                     <br/>
-                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                    <button>Done</button> -or- <span class="closePopBtn">Cancel</span>
                 </form>
             </div>
 
             <div id="addEmail" class="indi_popup">
                 <span class="main_label">Add / Edit Email</span>
                 <form id="emailForm">
-                    <label for="select_label"></label>
+                    <label for="select_label">Label</label>
                     <select id="select_label">
                       <option value="main">Main</option>
                       <option value="work">Work</option>
@@ -60,17 +60,17 @@
                       <option value="personal">Personal</option>
                     </select>
                     <br/>
-                    <label for="email">Address</label>
-                    <textarea id="email"></textarea>
+                    <label for="email">Email Address</label>
+                    <input id="email">
                     <br/>
-                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                    <button>Done</button> -or- <span class="closePopBtn">Cancel</span>
                 </form>
             </div>
 
             <div id="addWebsite" class="indi_popup">
                 <span class="main_label">Add / Edit Website</span>
                 <form id="websiteForm">
-                    <label for="select_label"></label>
+                    <label for="select_label">Label</label>
                     <select id="select_label">
                       <option value="main">Main</option>
                       <option value="work">Work</option>
@@ -79,10 +79,10 @@
                       <option value="personal">Personal</option>
                     </select>
                     <br/>
-                    <label for="website">Address</label>
-                    <textarea id="website"></textarea>
+                    <label for="website">Web Address</label>
+                    <input id="website">
                     <br/>
-                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                    <button>Done</button> -or- <span class="closePopBtn">Cancel</span>
                 </form>
             </div>
         </section>
@@ -122,7 +122,7 @@
                 </section>
                <section class="single_edit_entry entry_for_web">
                     <span class="main_label">Websites</span>
-                    <div class="entry-phones">
+                    <div class="entry-web">
                         <span class="label"></span>
                         <p></p>
                     </div>
@@ -134,7 +134,7 @@
                 <form id="notesOfBiz">
                     <textarea></textarea>
                 </form>
-                <button class="addPhone" id="newEntrySubmit">Save</button> -or- <a href="#" class="cancelBtn">Cancel</a>
+                <button id="newEntrySubmit">Save</button> -or- <span class="cancelBtn">Cancel</span>
             </section>
         </section>
     </script>

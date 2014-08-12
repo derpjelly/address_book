@@ -50,6 +50,7 @@ h2{font-size: 32px; border-bottom: 5px solid black; padding: 0 0 10px 0;}
 .single_entry_edit div:after{content:"";clear: both;display: block;}
 .single_entry_edit div span{float: left; display: block; min-width: 200px;}
 .single_entry_edit div p{float: right; width: 200px; margin: 0;}
+.single_entry_edit .cancelBtn{color: red; cursor: pointer;}
 #nameOfBiz input{padding: 10px; font-size: 20px; width: 900px;}
 #notesOfBiz textarea{padding: 10px; font-size: 12px; width: 900px;}
 
@@ -61,6 +62,12 @@ h2{font-size: 32px; border-bottom: 5px solid black; padding: 0 0 10px 0;}
 	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
 }
-.indi_popup{display: none;}
+.form_pop_up .indi_popup .main_label{font-size: 18px;}
+.form_pop_up .indi_popup form{margin-top: 20px;}
+.form_pop_up .indi_popup form label{margin: 0 10px 10px 0; width: 150px; display: inline-block;}
+.form_pop_up .indi_popup form select{min-width: 150px; display: inline-block;}
+.form_pop_up .indi_popup form textarea,.form_pop_up .indi_popup form input{min-width: 150px; display: inline-block;}
+.form_pop_up .indi_popup form .closePopBtn{cursor: pointer; color: red;}
+#notesOfBiz{margin-bottom: 20px;}
 
 

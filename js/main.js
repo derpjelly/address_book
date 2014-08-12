@@ -118,14 +118,14 @@ $(function(){
 			  fieldValue = $this.find('#phone').val();
 			  $('.form_pop_up').fadeOut(500);
 
-			  var phoneHTML = '<span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p>'
+			  var phoneHTML = '<div><span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p></div>'
 
 			  valuesObj.label = fieldLabel;
 			  valuesObj.value = fieldValue;
 
 			  that.phoneFormArray.push(valuesObj);
 
-			  $('.entry_for_phone').append(phoneHTML);
+			  $('.entry_for_phone').find(".entry-phones").append(phoneHTML);
 
 			  event.preventDefault();
 			});
@@ -137,14 +137,14 @@ $(function(){
 			  fieldValue = $this.find('#email').val();
 			  $('.form_pop_up').fadeOut(500);
 
-			  var emailHTML = '<span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p>'
+			  var emailHTML = '<div><span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p></div>'
 
 			  valuesObj.label = fieldLabel;
 			  valuesObj.value = fieldValue;
 
 			  that.emailFormArray.push(valuesObj);
 
-			  $('.entry_for_email').append(emailHTML);
+			  $('.entry_for_email').find(".entry-emails").append(emailHTML);
 
 			  event.preventDefault();
 			});
@@ -156,14 +156,14 @@ $(function(){
 			  fieldValue = $this.find('#website').val();
 			  $('.form_pop_up').fadeOut(500);
 
-			  var webHTML = '<span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p>'
+			  var webHTML = '<div><span class="label">'+ fieldLabel + '</span><p>'+ fieldValue +'</p></div>'
 
 			  valuesObj.label = fieldLabel;
 			  valuesObj.value = fieldValue;
 
 			  that.websiteFormArray.push(valuesObj);
 
-			  $('.entry_for_web').append(webHTML);
+			  $('.entry_for_web').find(".entry-web").append(webHTML);
 
 			  event.preventDefault();
 			});
