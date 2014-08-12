@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Address Book</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <section id="modal"></section>
+    <script id="add-entry-modal" type="text/x-handlebars-template">
+        <section class="form_pop_up">
+            <div id="addAddress" class="indi_popup">
+                <span class="main_label">Add / Edit Address</span>
+                <form id="addressForm">
+                    <label for="select_label"></label>
+                    <select id="select_label">
+                      <option value="main">Main</option>
+                      <option value="work">Work</option>
+                      <option value="direct">Direct</option>
+                      <option value="cell">Cell</option>
+                      <option value="personal">Personal</option>
+                    </select>
+                    <br/>
+                    <label for="addy">Address</label>
+                    <textarea id="addy"></textarea>
+                    <br/>
+                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                </form>
+            </div>
+
+            <div id="addPhone" class="indi_popup">
+                <span class="main_label">Add / Edit Phone</span>
+                <form id="phoneForm">
+                    <label for="select_label"></label>
+                    <select id="select_label">
+                      <option value="main">Main</option>
+                      <option value="work">Work</option>
+                      <option value="direct">Direct</option>
+                      <option value="cell">Cell</option>
+                      <option value="personal">Personal</option>
+                    </select>
+                    <br/>
+                    <label for="phone">Address</label>
+                    <textarea id="phone"></textarea>
+                    <br/>
+                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                </form>
+            </div>
+
+            <div id="addEmail" class="indi_popup">
+                <span class="main_label">Add / Edit Email</span>
+                <form id="emailForm">
+                    <label for="select_label"></label>
+                    <select id="select_label">
+                      <option value="main">Main</option>
+                      <option value="work">Work</option>
+                      <option value="direct">Direct</option>
+                      <option value="cell">Cell</option>
+                      <option value="personal">Personal</option>
+                    </select>
+                    <br/>
+                    <label for="email">Address</label>
+                    <textarea id="email"></textarea>
+                    <br/>
+                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                </form>
+            </div>
+
+            <div id="addWebsite" class="indi_popup">
+                <span class="main_label">Add / Edit Website</span>
+                <form id="websiteForm">
+                    <label for="select_label"></label>
+                    <select id="select_label">
+                      <option value="main">Main</option>
+                      <option value="work">Work</option>
+                      <option value="direct">Direct</option>
+                      <option value="cell">Cell</option>
+                      <option value="personal">Personal</option>
+                    </select>
+                    <br/>
+                    <label for="website">Address</label>
+                    <textarea id="website"></textarea>
+                    <br/>
+                    <button>Done</button> -or- <a class="closePopBtn" href="#">Cancel</a>
+                </form>
+            </div>
+        </section>
+
+        <section class="single_entry_edit clearfix" data-entry-id="{{id}}">
+            <h2>My Address Book</h2>
+            <span>Name or business</span>
+            <form id="nameOfBiz">
+                <input type="text" id="nameOfBizEntry">
+            </form>
+            <section class="left">
+                <section class="single_edit_entry entry_for_address">
+                    <span class="main_label">Addresses</span>   
+                    <div class="entry-addreses">
+                        <!-- <span class="label"></span>
+                        <p></p> -->
+                    </div>
+                    <button name="addAddress" class="addEntryBtn">+ Address</button>
+                </section>
+               <section class="single_edit_entry entry_for_phone">
+                    <span class="main_label">Phone Numbers</span>
+                    <div class="entry-phones">
+                        <span class="label"></span>
+                        <p></p>
+                    </div>
+                    <button name="addPhone" class="addEntryBtn">+ Phone</button>
+               </section>
+            </section>
+            <section class="right">
+                <section class="single_edit_entry entry_for_email">
+                    <span class="main_label">Email Addresses</span>   
+                    <div class="entry-emails">
+                        <span class="label"></span>
+                        <p></p>
+                    </div>
+                    <button name="addEmail" class="addEntryBtn">+ Email</button>
+                </section>
+               <section class="single_edit_entry entry_for_web">
+                    <span class="main_label">Websites</span>
+                    <div class="entry-phones">
+                        <span class="label"></span>
+                        <p></p>
+                    </div>
+                    <button name="addWebsite" class="addEntryBtn">+ Website</button>
+               </section>
+            </section>
+            <section class="left">
+                <span class="main_label">Notes</span>
+                <form id="notesOfBiz">
+                    <textarea></textarea>
+                </form>
+                <button class="addPhone" id="newEntrySubmit">Save</button> -or- <a href="#" class="cancelBtn">Cancel</a>
+            </section>
+        </section>
+    </script>
+ 
+    <section id="wrapper">
+        <h2>My Address Book</h2>
+        <script id="entries-template" type="text/x-handlebars-template">
+            {{#each contacts}}
+            <section class="single_entry clearfix" data-entry-id="{{id}}">
+                <h3>{{name}}</h3>
+                <span class="remove_entry"><img src="images/removeIcon.png"/></span>
+                <section class="left">
+                    {{#each addresses}}
+                        <div class="entry-emails">
+                            <span class="label">{{label}}</span>
+                            <p>{{value}}</p>
+                        </div>
+                    {{/each}}
+                    {{#each phones}}
+                        <div class="entry-phones">
+                            <span class="label">{{label}}</span>
+                            <p>{{value}}</p>
+                        </div>
+                    {{/each}}
+                </section>
+                <section class="right">
+                    {{#each emails}}
+                        <div>
+                            <span class="label">{{label}}</span>
+                            <p>{{value}}</p>
+                        </div>
+                    {{/each}}
+                    {{#each websites}}
+                        <div>
+                            <span class="label">{{label}}</span>
+                            <p>{{value}}</p>
+                        </div>
+                    {{/each}}
+                    <div>
+                        <span class="label">Note</span>
+                        <p>{{note}}</p>
+                    </div>
+                </section>
+            </section>
+            {{/each}}
+        </script>
+        <div id="entries"></div>
+        <button class="addEntry">Add Entry</button>
+    </section>
+<script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/underscore-min.js"></script>
+<script language="javascript" type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+<script language="javascript" type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

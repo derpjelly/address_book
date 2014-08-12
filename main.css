@@ -1,0 +1,66 @@
+body{font-family: arial,serif;}
+.left{float: left;}
+.right{float: right;}
+.clearfix:after{content:"";clear: both;display: block;}
+
+
+#wrapper{width: 920px; height: 1000px; margin: 0 auto;}
+#modal{position: absolute; height: 100%; width: 100%; top: 0; left: 0; display: none; background-color: #fff; z-index: 999;}
+h2{font-size: 32px; border-bottom: 5px solid black; padding: 0 0 10px 0;}
+
+
+
+.single_entry{display: block; border-bottom: 1px solid black; margin: 30px 0; position: relative;}
+.single_entry div{margin: 10px 0 10px 10px;}
+.single_entry div:after{content:"";clear: both;display: block;}
+.single_entry div span{float: left; display: block; min-width: 200px;}
+.single_entry div p{float: right; width: 200px; margin: 0;}
+
+.single_entry:hover .remove_entry{opacity: 1;}
+.single_entry:hover .edit_entry{opacity: 1;}
+
+.single_entry > h3{
+	-webkit-transition: margin-left 0.5s;
+    transition: margin-left 0.5s;
+    margin-left:0;
+}
+.single_entry:hover > h3{margin-left:50px;}
+
+
+.single_edit_entry:hover > .remove_entry{opacity: 1;}
+.single_edit_entry:hover > .edit_entry{opacity: 1;}
+
+
+.remove_entry{
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	opacity: 0;
+	-webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+    cursor: pointer;
+}
+
+.single_edit_entry{position: relative; padding: 20px 0;}
+
+.single_entry_edit{width: 920px; height: 1000px; margin: 0 auto; position: relative;}
+.single_entry_edit h2{}
+.single_entry_edit span{}
+.single_entry_edit div{margin: 10px 0 10px 10px; position: relative;}
+.single_entry_edit div:after{content:"";clear: both;display: block;}
+.single_entry_edit div span{float: left; display: block; min-width: 200px;}
+.single_entry_edit div p{float: right; width: 200px; margin: 0;}
+#nameOfBiz input{padding: 10px; font-size: 20px; width: 900px;}
+#notesOfBiz textarea{padding: 10px; font-size: 12px; width: 900px;}
+
+
+.form_pop_up{
+	position: absolute; background-color: #fff; width: 400px; height: auto; left: 50%; 
+	margin-left: -225px; padding: 50px; top: 10%; display: none; z-index: 99999;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.indi_popup{display: none;}
+
+
